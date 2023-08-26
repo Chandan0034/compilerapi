@@ -11,6 +11,7 @@ const { exec } = require('child_process');
 app.use(bodyParser.json());
 app.use(cors());
 const io=new Server(server);
+const PORT=process.env.PORT ||5000;
 io.on('connection',(socket)=>{
     socket.on('runCode',(data)=>{
         const {code,sendLanguage}=data;
@@ -74,4 +75,4 @@ io.on('connection',(socket)=>{
         console.log("disconnected");
     })
 })
-server.listen(5000,()=>console.log("server started at port 9000"));
+server.listen(PORT,()=>console.log("server started at port 9000"));
