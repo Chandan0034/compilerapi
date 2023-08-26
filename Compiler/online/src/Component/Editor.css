@@ -1,0 +1,92 @@
+.EditorInputOutput{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.EditorMirror{
+    font-size: 19px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: 300;
+
+}
+.Navbar{
+    height: 60px;
+    background-color: rgb(113, 229, 95);
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.Theme{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+    margin: 3px;
+    color: black;
+    border: 1px solid black;
+    background-color: bisque;
+}
+.label{
+    font-size: 25px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+.ThemeContainer{
+    align-items: center;
+    height: 60px;
+    gap: 12;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.outputBox{
+    width: 29.5vw;
+    height: calc(100vh - 67.5px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+.inputArea{
+    width: 29vw;
+    height: calc(25vh - 34px);
+    resize: none;
+    padding: 5px;
+    font-size:20px;
+    font-weight: 600;
+    color: black;
+}
+.inputSubmit{
+    padding: 5px;
+    font-size: 17px;
+    font-weight: 800;
+    color: black;
+    border-radius: 5px;
+    margin: 5px;
+}
+.outputEditor{
+    font-size: 20px;
+    color: white;
+    background-color: black;
+}
+.run{
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+    color: blueviolet;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.inputLabel{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
