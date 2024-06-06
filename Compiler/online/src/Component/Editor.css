@@ -73,7 +73,8 @@
     bottom: -100%;
     left: 20%;
     width: 60%;
-    height: calc(80vh);
+    height: calc(60vh);
+    margin-bottom: 15vh;
     display: flex;
     background-color: white;
     border-radius: 1.5rem;
