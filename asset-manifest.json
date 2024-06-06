@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/compilerapi/static/css/main.6ae118e8.css",
+    "main.js": "/compilerapi/static/js/main.489ea24e.js",
+    "static/js/787.5ae4f0e6.chunk.js": "/compilerapi/static/js/787.5ae4f0e6.chunk.js",
+    "index.html": "/compilerapi/index.html",
+    "main.6ae118e8.css.map": "/compilerapi/static/css/main.6ae118e8.css.map",
+    "main.489ea24e.js.map": "/compilerapi/static/js/main.489ea24e.js.map",
+    "787.5ae4f0e6.chunk.js.map": "/compilerapi/static/js/787.5ae4f0e6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ae118e8.css",
+    "static/js/main.489ea24e.js"
+  ]
+}
