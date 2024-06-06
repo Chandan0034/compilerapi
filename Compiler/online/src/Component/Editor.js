@@ -1,5 +1,5 @@
 import CodeMirror from '@uiw/react-codemirror';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import './Editor.css';
 import { StreamLanguage } from '@codemirror/language';
 import { dracula, vscodeDark, abcdef, solarizedDark, xcodeLight } from '@uiw/codemirror-themes-all';
@@ -18,7 +18,6 @@ function Editor() {
     const [themes, setTheme] = useState(2);
     const [status, setStatus] = useState(false);
     const [language, setLanguage] = useState(python);
-    const [input,setInput]=useState();
     const [languageExtension, setLanguageExtension] = useState([StreamLanguage.define(language)]);
     const [code, setCode] = useState(`print("hello")`);
     const [isRunning, setIsRunning] = useState(false);
@@ -43,15 +42,30 @@ function Editor() {
             socket.off('output', handleOutput);  // Clean up listener on component unmount
         };
     }, []);
+    // const handleKeyDown = (event) => {
+    //     if (event.key === 'Enter') {
+    //         event.preventDefault();
+    //         console.log(socketData)
+    //         // const currentValue = value;
+    //         // console.log("currntValue ",currentValue)
+    //         // const previousValue = previousValueRef.current;
+    //         // console.log("previousValue ",previousValue)
+    //         // const input = currentValue.substring(previousValue.length);
+    //         // socket.emit('inputValue', input.trim());
+    //         // previousValueRef.current = currentValue;  // Update the previous value reference
+    //         // setValue(prev => prev + '\n');  // Move to the next line in the output editor
+    //     }
+    // };
+
 
     function handleKeyDown(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
-            console.log(value)
-            const inputs = value.split('\n').pop();  // Get the last line of the value as input
-            setInput(inputs);
-            console.log("input",input);
-            socket.emit('inputValue', input);
+            const inputs = value.trim().split('\n').pop();
+            const arr=value.split('\n')
+            console.log(arr)  // Get the last line of the value as input
+            console.log("input",inputs);
+            socket.emit('inputValue', inputs);
             setValue(prev => prev + '\n');  // Move to the next line in the output editor
         }
     }
