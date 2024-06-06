@@ -1,5 +1,3 @@
-//import CodeMirror from '@uiw/react-codemirror';
-
 import './App.css';
 import Editor from './Component/Editor';
 import React from 'react';
