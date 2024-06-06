@@ -15,10 +15,10 @@ const socket = io("https://code-compiler-1.onrender.com/", { transports: ["webso
 function Editor() {
     const [sendLanguage, setSendLanguage] = useState('py');
     const [value, setValue] = useState('');
-    const [themes, setTheme] = useState(2);
+    const [themes, setTheme] = useState(1);
     const [status, setStatus] = useState(false);
-    const [language, setLanguage] = useState(python);
-    const [languageExtension, setLanguageExtension] = useState([StreamLanguage.define(language)]);
+    // const [language, setLanguage] = useState(python);
+    const [languageExtension, setLanguageExtension] = useState([StreamLanguage.define(python)]);
     const [code, setCode] = useState(`print("hello")`);
     const [isRunning, setIsRunning] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
@@ -66,7 +66,7 @@ function Editor() {
             console.log(arr)  // Get the last line of the value as input
             console.log("input",inputs);
             socket.emit('inputValue', inputs);
-            setValue(prev => prev + '\n');  // Move to the next line in the output editor
+            setValue(prev => prev);  // Move to the next line in the output editor
         }
     }
 
