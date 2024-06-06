@@ -18,6 +18,7 @@ function Editor() {
     const [themes, setTheme] = useState(2);
     const [status, setStatus] = useState(false);
     const [language, setLanguage] = useState(python);
+    const [input,setInput]=useState();
     const [languageExtension, setLanguageExtension] = useState([StreamLanguage.define(language)]);
     const [code, setCode] = useState(`print("hello")`);
     const [isRunning, setIsRunning] = useState(false);
@@ -47,7 +48,8 @@ function Editor() {
         if (event.key === 'Enter') {
             event.preventDefault();
             console.log(value)
-            const input = value.split('\n').pop();  // Get the last line of the value as input
+            const inputs = value.split('\n').pop();  // Get the last line of the value as input
+            setInput(inputs);
             console.log("input",input);
             socket.emit('inputValue', input);
             setValue(prev => prev + '\n');  // Move to the next line in the output editor
